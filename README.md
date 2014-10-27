@@ -1,4 +1,5 @@
-drush-docker
-============
+# Drush Docker Container
 
-Docker container to run Drush
+See [Dockerfile](Dockerfile) for more information.
+
+@todo Add documentation.
