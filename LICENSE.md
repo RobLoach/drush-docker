@@ -1,6 +1,6 @@
 # LICENSE
 
-Drush Docker are released under the MIT License:
+Drush Docker is released under the MIT License:
 
 > Copyright (C) 2014+ [Rob Loach](http://robloach.net)
 >
