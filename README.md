@@ -24,11 +24,11 @@ docker build -t drush/drush .
 
 ## Usage
 
-To execute Drush directly, run the container with `docker run`:
+To execute Drush directly, run the container with `docker run`, mounting the `/app` volume:
 
 ```
-docker run drush/drush
-docker run drush/drush help
-docker run drush/drush --version
-docker run drush/drush status
+docker run drush/drush -v $(pwd):/app
+docker run drush/drush -v $(pwd):/app help
+docker run drush/drush -v $(pwd):/app --version
+docker run drush/drush -v $(pwd):/app status
 ```
