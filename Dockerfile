@@ -2,6 +2,10 @@
 FROM composer/composer
 MAINTAINER Rob Loach <robloach@gmail.com>
 
+# Add common extensions
+RUN apt-get update && apt-get install -y mysql-client
+RUN docker-php-ext-install pdo_mysql
+
 # Install Drush using Composer
 RUN composer global require drush/drush:~8.0.0@beta --prefer-dist
 
