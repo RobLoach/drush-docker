@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y mysql-client
 RUN docker-php-ext-install pdo_mysql
 
 # Install Drush using Composer
-RUN composer global require drush/drush:~8.0.0@beta --prefer-dist
+RUN composer global require drush/drush:"dev-master" --prefer-dist
 
 # Setup the symlink
 RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
