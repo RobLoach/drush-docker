@@ -18,7 +18,8 @@ Or build `drush/drush` from source:
 ```
 git clone https://github.com/RobLoach/drush-docker.git
 cd drush-docker
-docker build -t drush/drush .
+cd dev-master
+docker build -t drush/drush:dev-master .
 ```
 
 
