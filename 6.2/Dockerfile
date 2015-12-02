@@ -6,6 +6,9 @@ MAINTAINER Rob Loach <robloach@gmail.com>
 RUN apt-get update && apt-get install -y mysql-client
 RUN docker-php-ext-install pdo_mysql
 
+# Drush 6 needs the Console_Table pear.
+RUN pear install Console_Table
+
 # Install Drush using Composer
 RUN composer global require drush/drush:"~6.2.0" --prefer-dist
 
