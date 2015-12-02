@@ -1,33 +1,60 @@
 # Drush Docker Container
 
-A [Docker](http://docker.io) container to run
-[Drush](https://github.com/drush-ops/drush), [Drupal](http://drupal.org)'s
-command line tool.
-
-## Installation
-
-Pull `drush/drush` from the Docker repository:
-
-```
-docker pull drush/drush
-```
-
-Or build `drush/drush` from source:
-
-```
-git clone https://github.com/RobLoach/drush-docker.git
-cd drush-docker
-cd 8
-docker build -t drush/drush:8 .
-```
+A [Docker](http://docker.com) container to run [Drush](https://github.com/drush-ops/drush), [Drupal](http://drupal.org)'s command line tool.
 
 ## Usage
 
+This covers how to run the Drush container through the [Docker CLI](http://docker.com).
+
+### Pull
+
+Pull `drush/drush` from the Docker repository:
+
+``` bash
+docker pull drush/drush
+```
+
+Alternatively, you can download a specific version of Drush:
+
+``` bash
+docker pull drush/drush:8
+```
+
+### Run
+
 To execute Drush directly, run the container with `docker run`, mounting the `/app` volume:
 
-```
+``` bash
 docker run drush/drush -v $(pwd):/app
 docker run drush/drush -v $(pwd):/app help
 docker run drush/drush -v $(pwd):/app --version
 docker run drush/drush -v $(pwd):/app status
 ```
+
+If you installed a specific version of Drush, run it with:
+
+``` bash
+docker run drush/drush:8 -v $(pwd):/app --version
+```
+
+## Development
+
+1. Download the source:
+  ``` bash
+  git clone https://github.com/RobLoach/drush-docker.git
+  cd drush-docker
+  ```
+
+2. Build one of the images:
+  ``` bash
+  docker build -t drush/drush:8 8
+  ```
+
+3. Use the `Makefile` to build and test all images:
+  ``` bash
+  make
+  ```
+
+4. Visit [the `drush/drush` Docker Hub](https://hub.docker.com/r/drush/drush/) for build details.
+
+5. Submit Pull Requests and create issues for new changes and features you'd like to add.
