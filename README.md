@@ -4,7 +4,6 @@ A [Docker](http://docker.io) container to run
 [Drush](https://github.com/drush-ops/drush), [Drupal](http://drupal.org)'s
 command line tool.
 
-
 ## Installation
 
 Pull `drush/drush` from the Docker repository:
@@ -18,10 +17,9 @@ Or build `drush/drush` from source:
 ```
 git clone https://github.com/RobLoach/drush-docker.git
 cd drush-docker
-cd dev-master
-docker build -t drush/drush:dev-master .
+cd 8
+docker build -t drush/drush:8 .
 ```
-
 
 ## Usage
 
