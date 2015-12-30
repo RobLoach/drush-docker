@@ -25,16 +25,16 @@ docker pull drush/drush:8
 To execute Drush directly, run the container with `docker run`, mounting the `/app` volume:
 
 ``` bash
-docker run drush/drush -v $(pwd):/app
-docker run drush/drush -v $(pwd):/app help
-docker run drush/drush -v $(pwd):/app --version
-docker run drush/drush -v $(pwd):/app status
+docker run -v $(pwd):/app drush/drush
+docker run -v $(pwd):/app drush/drush help
+docker run -v $(pwd):/app drush/drush --version
+docker run -v $(pwd):/app drush/drush status
 ```
 
 If you installed a specific version of Drush, run it with:
 
 ``` bash
-docker run drush/drush:8 -v $(pwd):/app --version
+docker run -v $(pwd):/app drush/drush:8 --version
 ```
 
 ## Development
