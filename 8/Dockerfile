@@ -8,10 +8,8 @@ MAINTAINER Rob Loach <robloach@gmail.com>
 ENV DRUSH_VERSION 8.0.5
 
 # So phar away... doesn't anybody composer anymore?
-RUN curl -fsSL -o /usr/local/bin/drush "https://github.com/drush-ops/drush/releases/download/$DRUSH_VERSION/drush.phar"
+RUN curl -fsSL -o /usr/local/bin/drush "https://github.com/drush-ops/drush/releases/download/$DRUSH_VERSION/drush.phar" && \
+  chmod +x /usr/local/bin/drush
 
 # Test your install.
 RUN php /usr/local/bin/drush core-status
-
-# EXECUTE
-RUN chmod +x /usr/local/bin/drush
