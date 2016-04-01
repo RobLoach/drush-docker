@@ -1,0 +1,12 @@
+# Drush Docker Container for Backdrop CMS
+FROM drush/drush:8
+MAINTAINER William T. Riker <robloach@gmail.com>
+
+# Create a drush image for the Backdrop CMS lovers of the world
+# See https://github.com/backdrop-contrib/drush
+RUN mkdir -p /usr/share/drush/commands/backdrop && \
+  cd /usr/share/drush/commands/backdrop && \
+  curl -fsSL "https://github.com/backdrop-contrib/drush/archive/master.tar.gz" | tar xvz --strip-components 1
+
+# Make sure our cache is wiped and plugins are loaded.
+RUN php /usr/local/bin/drush cache-clear drush
