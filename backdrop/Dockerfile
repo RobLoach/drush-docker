@@ -1,6 +1,6 @@
 # Drush Docker Container for Backdrop CMS
 FROM drush/drush:8
-MAINTAINER William T. Riker <robloach@gmail.com>
+MAINTAINER Mike Pirog
 
 # Create a drush image for the Backdrop CMS lovers of the world
 # See https://github.com/backdrop-contrib/drush
