@@ -2,14 +2,11 @@
 FROM drush/drush:base
 MAINTAINER Rob Loach <robloach@gmail.com>
 
-# Set the latest drush version
-# @todo: Doing things this way so we can actually trigger a rebuild of this
-#        image vs pulling from the "latest" link
+# Set the Drush version.
 ENV DRUSH_VERSION 8.0.5
 
-# So phar away... doesn't anybody composer anymore?
-RUN curl -fsSL -o /usr/local/bin/drush "https://github.com/drush-ops/drush/releases/download/$DRUSH_VERSION/drush.phar" && \
-  chmod +x /usr/local/bin/drush
+# Install Drush using Composer.
+RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
 # Test your install.
 RUN php /usr/local/bin/drush core-status
