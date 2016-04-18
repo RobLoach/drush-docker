@@ -15,4 +15,5 @@ version:
 	docker run drush/drush:6 --version
 	docker run drush/drush:backdrop --version
 
-.PHONY: build
+test:
+	@make version
