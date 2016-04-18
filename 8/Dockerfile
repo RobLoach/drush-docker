@@ -9,4 +9,4 @@ ENV DRUSH_VERSION 8.0.5
 RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
 # Test your install.
-RUN php /usr/local/bin/drush core-status
+RUN drush core-status
