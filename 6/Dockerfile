@@ -5,11 +5,11 @@ MAINTAINER Rob Loach <robloach@gmail.com>
 # Drush 6 needs the Console_Table pear.
 RUN pear install Console_Table
 
-# Install Drush using Composer
-RUN composer global require drush/drush:"6.*" --prefer-dist
+# Set the Drush version.
+ENV DRUSH_VERSION 6.7.0
 
-# Setup the symlink
-RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
+# Install Drush using Composer.
+RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
 # Display which version of Drush was installed
 RUN drush --version
