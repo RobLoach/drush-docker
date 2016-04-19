@@ -1,4 +1,4 @@
-# Drush Docker Container
+# Drush Docker Container [![Build Status](https://travis-ci.org/RobLoach/drush-docker.svg?branch=master)](https://travis-ci.org/RobLoach/drush-docker)
 
 A [Docker](http://docker.com) container to run [Drush](https://github.com/drush-ops/drush), [Drupal](http://drupal.org)'s command line tool.
 
