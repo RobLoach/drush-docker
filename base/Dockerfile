@@ -13,7 +13,7 @@ RUN git clone --branch="php7" https://github.com/phpredis/phpredis.git /tmp/phpr
   # Enable the extension.
   echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini && \
   # Test to make sure it's available.
-  php -m && php -R "$redis = new Redis();"
+  php -m && php -r "new Redis();"
 
 # Update the entry point of the application
 ENTRYPOINT ["drush"]
