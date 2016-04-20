@@ -7,11 +7,9 @@ RUN apt-get update && apt-get install -y mysql-client
 RUN docker-php-ext-install pdo_mysql
 
 # Add the Redis PHP module.
-RUN git clone --branch="php7" https://github.com/phpredis/phpredis.git /tmp/phpredis && cd /tmp/phpredis && \
-  # Compile and install it.
-  phpize && ./configure && make && make install && make test && rm -rf /tmp/phpredis && \
-  # Enable the extension.
-  echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini && \
+RUN git clone --branch="php7" https://github.com/phpredis/phpredis.git /usr/src/php/ext/redis && \
+  # Install the Redis module.
+  docker-php-ext-install redis && \
   # Test to make sure it's available.
   php -m && php -r "new Redis();"
 
