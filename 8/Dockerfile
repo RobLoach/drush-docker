@@ -1,5 +1,5 @@
 # Drush Docker Container
-FROM drush/drush:base
+FROM drush/drush:base-php5
 MAINTAINER Rob Loach <robloach@gmail.com>
 
 # Set the Drush version.

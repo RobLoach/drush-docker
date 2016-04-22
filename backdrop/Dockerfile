@@ -1,5 +1,5 @@
 # Drush Docker Container for Backdrop CMS
-FROM drush/drush:8
+FROM drush/drush:8-php5
 MAINTAINER Mike Pirog
 
 # Set the Backdrop Drush version.
