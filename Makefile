@@ -6,7 +6,6 @@ build:
 	docker build -t drush/drush:7 7
 	docker build -t drush/drush:backdrop backdrop
 	docker build -t drush/drush:base-alpine base/alpine
-	docker build -t drush/drush:alpine master/alpine
 	docker build -t drush/drush:9-alpine 9/alpine
 	docker build -t drush/drush:8-alpine 8/alpine
 	docker build -t drush/drush:7-alpine 7/alpine
