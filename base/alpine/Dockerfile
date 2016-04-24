@@ -1,5 +1,5 @@
 # Drush Docker Container
-FROM composer/composer-alpine
+FROM composer/composer:alpine
 MAINTAINER Rob Loach <robloach@gmail.com>
 
 # Add common extensions
