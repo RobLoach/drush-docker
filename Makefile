@@ -9,6 +9,7 @@ build:
 	docker build -t drush/drush:alpine master/alpine
 	docker build -t drush/drush:9-alpine 9/alpine
 	docker build -t drush/drush:8-alpine 8/alpine
+	docker build -t drush/drush:7-alpine 7/alpine
 	docker build -t drush/drush:backdrop-alpine backdrop/alpine
 
 version:
@@ -20,6 +21,7 @@ version:
 	docker run drush/drush:alpine --version
 	docker run drush/drush:9-alpine --version
 	docker run drush/drush:8-alpine --version
+	docker run drush/drush:7-alpine --version
 	docker run drush/drush:backdrop-alpine --version
 
 test:
