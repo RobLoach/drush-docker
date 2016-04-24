@@ -1,9 +1,9 @@
 # Drush Docker Container
-FROM drush/drush:base
+FROM drush/drush:base-php5-alpine
 MAINTAINER Rob Loach <robloach@gmail.com>
 
-# Set the Drush version..
-ENV DRUSH_VERSION dev-master
+# Set the Drush version.
+ENV DRUSH_VERSION 9.0.0-alpha1
 
 # Install Drush using Composer.
 RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
