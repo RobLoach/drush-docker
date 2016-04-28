@@ -20,7 +20,6 @@ function write_files {
 	local variant=$2
 
 	short_version=$(echo $full_version | sed -r -e 's/^([0-9]+).*/\1/')
-	echo $short_version
 	if [[ -z $variant ]]; then
 		target_dir="$short_version"
 		template=Dockerfile.template
@@ -32,7 +31,7 @@ function write_files {
 	mkdir -p "$target_dir"
 	cp $template "$target_dir/Dockerfile"
 	if [[ -f docker-entrypoint.sh ]]; then
-		cp -r docker-entrypoint.sh scripts "$target_dir"
+		cp -r docker-entrypoint.sh "$target_dir"
 	fi
 	sed -r -i -e 's/^(ENV DRUSH_VERSION) .*/\1 '"$full_version"'/' "$target_dir/Dockerfile"
 }
