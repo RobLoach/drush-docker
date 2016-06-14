@@ -9,6 +9,7 @@ RUN apk --update add \
     mysql-client \
     postgresql-client \
     postgresql-dev \
+    php7-pear \
     patch \
     tar && \
     docker-php-ext-install mysqli pgsql pdo_mysql pdo_pgsql && \
