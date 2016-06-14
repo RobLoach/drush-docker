@@ -10,7 +10,7 @@ RUN apk --update add \
     postgresql-client \
     postgresql-dev \
     tar && \
-    docker-php-ext-install mysqli pgsql pdo_mysql pdo_pgsql && \
+    docker-php-ext-install mysql mysqli pgsql pdo_mysql pdo_pgsql && \
     apk del build-base postgresql-dev && \
     rm -rf /var/cache/apk/*
 

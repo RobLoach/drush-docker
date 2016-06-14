@@ -3,8 +3,8 @@ FROM composer/composer:php5
 MAINTAINER Rob Loach <robloach@gmail.com>
 
 # Add common extensions
-RUN apt-get update && apt-get install -y mysql-client
-RUN docker-php-ext-install pdo_mysql
+RUN apt-get update && apt-get install -y mysql-client && \
+    docker-php-ext-install mysql mysqli pdo_mysql
 
 # Add the Redis PHP module.
 RUN git clone --branch="2.2.7" https://github.com/phpredis/phpredis.git /usr/src/php/ext/redis && \
