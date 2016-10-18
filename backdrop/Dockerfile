@@ -3,7 +3,7 @@ FROM drush/drush:8
 MAINTAINER Mike Pirog
 
 # Set the Backdrop Drush version.
-ENV BACKDRUSH_VERSION 0.0.1
+ENV BACKDRUSH_VERSION 0.0.2
 
 # Create a drush image for the Backdrop CMS lovers of the world
 # See https://github.com/backdrop-contrib/drush
