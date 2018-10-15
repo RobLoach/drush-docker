@@ -18,7 +18,7 @@ version:
 	docker run drush/drush:7 --version
 	docker run drush/drush:backdrop --version
 	docker run drush/drush:alpine --version
-	docker run drush/drush:9-alpine --version
+	docker run drush/drush:9-alpine --drush-launcher-version
 	docker run drush/drush:8-alpine --version
 	docker run drush/drush:7-alpine --version
 	docker run drush/drush:backdrop-alpine --version

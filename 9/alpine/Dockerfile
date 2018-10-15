@@ -8,4 +8,4 @@ RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/down
   mv drush.phar /usr/local/bin/drush
 
 # Display which version of Drush was installed.
-RUN drush --version; exit 0
+RUN drush --drush-launcher-version
