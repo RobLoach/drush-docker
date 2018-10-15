@@ -1,5 +1,5 @@
 # Drush Docker Container
-FROM composer/composer:alpine
+FROM composer
 MAINTAINER Moses Liao <moses.liao.sd@gmail.com>
 
 # Add common extensions
