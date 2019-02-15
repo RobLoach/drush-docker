@@ -92,4 +92,4 @@ WORKDIR /app
 #
 
 # Update the entry point of the application
-# ENTRYPOINT ["drush"]
+ENTRYPOINT ["drush"]
