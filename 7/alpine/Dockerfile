@@ -10,3 +10,6 @@ RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
 # Display which version of Drush was installed
 RUN drush --version
+
+# Install rebuild_registry.
+RUN drush @none dl registry_rebuild-7.x
